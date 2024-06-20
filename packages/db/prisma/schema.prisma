@@ -42,6 +42,7 @@ model P2PTransaction {
   senderId  Int
   receiverId Int 
   amount    Int
+  timestamp DateTime
   sender    User   @relation("Sender", fields: [senderId], references: [id])
   receiver  User   @relation("Receiver", fields: [receiverId], references: [id])
 }
